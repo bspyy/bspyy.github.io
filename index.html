@@ -9,7 +9,7 @@ title: 我的Blog
 			<h2 class="blog-post-title">
 				<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
 			</h2>
-			<p class="blog-post-meta">{{ post.date | date_to_string }} by <a href="#">admin</a></p>
+			<p class="blog-post-meta">{{ post.date | date:"%Y-%m-%d"}} by <a href="#">admin</a></p>
 			<div>
 				{{ post.excerpt|remove:'<h2>'|remove:'</h2>' }}
 			</div>
@@ -17,4 +17,6 @@ title: 我的Blog
 	</div>
 	　{% endfor %}
 </div>
+
+
 
