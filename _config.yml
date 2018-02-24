@@ -1,3 +1,6 @@
+name: Name
+title: Title
+description: Description
+meta_description: "meta description"
 layouts: ./_layout
 subtitle: subtitle
-description: description
