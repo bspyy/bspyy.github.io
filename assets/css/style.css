@@ -8,3 +8,6 @@ nav a{color: white}
 .navbar button:hover{color: black;background:white}
 
 .comment-list{background: #f1f1f1}
+
+/* markdown */
+blockquote{padding-right: 5rem;padding-left: 1.25rem;}
