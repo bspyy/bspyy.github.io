@@ -1,7 +1,7 @@
 /*
 Theme Name: Blog
 */
-
+h1, h2, h3, h4, h5, h6{}
 
 nav a{color: white}
 .navbar button{color: white;border-color:white}
@@ -9,5 +9,23 @@ nav a{color: white}
 
 .comment-list{background: #f1f1f1}
 
+
+
 /* markdown */
-blockquote{padding-right: 5rem;padding-left: 1.25rem;}
+blockquote{
+    padding: 0 1em;
+    color: #6a737d;
+    border-left: 0.25em solid #dfe2e5;
+}
+
+.highlight{
+    margin-bottom: 16px;
+}
+.highlight pre {
+    padding: 16px;
+    overflow: auto;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f6f8fa;
+    border-radius: 3px;
+}
