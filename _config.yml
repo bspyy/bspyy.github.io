@@ -1,3 +1,7 @@
+# Dependencies
+markdown:         redcarpet
+highlighter:      pygments
+
 name: Name
 title: Title
 description: Description
