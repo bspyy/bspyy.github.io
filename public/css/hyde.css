@@ -87,6 +87,10 @@ html {
 .sidebar-nav {
   margin-bottom: 10rem;
 }
+.sidebar-copy{
+  position: absolute;
+  bottom: 1rem;
+}
 .sidebar-nav-item {
   display: block;
   line-height: 1.75;
@@ -109,8 +113,9 @@ a.sidebar-nav-item:focus {
   .sidebar-sticky {
     position: absolute;
     right:  1rem;
-    bottom: 1rem;
+    /*bottom: 1rem;*/
     left:   1rem;
+    margin-top: 10rem
   }
 }
 
