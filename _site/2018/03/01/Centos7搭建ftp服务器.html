@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      CentOS7搭建FTP服务器 &middot; Title
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="/public/css/hyde.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
+<link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+
+  <body>
+
+    <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>
+        <a href="/">
+          Title
+        </a>
+      </h1>
+      <p class="lead">Description</p>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a class="sidebar-nav-item" href="/">首页</a>
+
+      
+
+      
+      
+        
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/about.html">About</a>
+          
+        
+      
+        
+      
+        
+          
+        
+      
+    </nav>
+  </div>
+  <p class="sidebar-copy">&copy; 2018. All rights reserved.</p>
+</div>
+
+
+    <div class="content container">
+      <div class="page">
+  <h1 class="page-title">CentOS7搭建FTP服务器</h1>
+  <h3 id="1-安装ftp服务">1 安装FTP服务</h3>
+
+<blockquote>
+  <p>yum install vsftpd</p>
+</blockquote>
+
+<h3 id="2-创建ftp用户并制定访问目录">2 创建FTP用户并制定访问目录</h3>
+
+<blockquote>
+  <p>useradd -d /home/ftpuser -s /sbin/nologin ftpuser</p>
+</blockquote>
+
+<h3 id="3-限制用户可以访问的目录">3 限制用户可以访问的目录</h3>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vi /etc/vsftpd/vsftpd.conf
+
+设置是否启用chroot_list_file配置项指定的用户列表文件。默认值为NO。
+chroot_list_enable=YES
+# (default follows)
+
+用于指定用户列表文件，该文件用于控制哪些用户可以切换到用户家目录的上级目录。
+chroot_list_file=/etc/vsftpd/chroot_list
+
+用于指定用户列表文件中的用户是否允许切换到上级目录。默认值为NO。
+chroot_local_user=YES
+</code></pre></div></div>
+
+<p>从2.3.5之后，vsftpd增强了安全检查，如果用户被限定在了其主目录下，则该用户的主目录不能再具有写权限了！如果检查发现还有写权限，就会报该错误。</p>
+
+<p>要修复这个错误，可以用命令chmod a-w /home/user去除用户主目录的写权限，注意把目录替换成你自己的。
+或者你可以在vsftpd的配置文件中增加下列项：</p>
+
+<blockquote>
+  <p>allow_writeable_chroot=YES</p>
+</blockquote>
+
+</div>
+
+    </div>
+
+  </body>
+</html>

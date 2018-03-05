@@ -4,3 +4,7 @@ description: Description
 meta_description: "meta description"
 layouts: ./_layouts
 subtitle: subtitle
+
+paginate: 5
+
+baseurl: /
