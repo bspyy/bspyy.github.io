@@ -9,6 +9,8 @@ meta_description: "meta description"
 layouts: ./_layouts
 subtitle: subtitle
 
+excerpt_separator:  '<!-- more -->'
+
 paginate: 5
 
 baseurl: /
