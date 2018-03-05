@@ -2,8 +2,7 @@
 markdown:         redcarpet
 highlighter:      pygments
 
-name: Name
-title: Title
+title: 技术日志
 description: Description
 meta_description: "meta description"
 layouts: ./_layouts
