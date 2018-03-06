@@ -9,10 +9,12 @@ title: Liunx新增swap分区
 <!-- more -->
 步骤如下 
 
-##### 增加 swap 大小, 1G 左右
+##### 创建一个1G大小的空文件
 > dd if=/dev/zero of=/var/swap bs=1M count=1024
 
-##### 设置交换文件
+[Linux中dd命令详解](http://blog.csdn.net/xizaihui/article/details/53307578)
+
+##### 将创建的文件设置为交换文件
 > mkswap /var/swap 
 
 ##### 激活启用交换分区
