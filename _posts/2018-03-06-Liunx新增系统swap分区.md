@@ -25,4 +25,5 @@ title: Liunx新增swap分区
     /var/swap               swap                    swap    defaults        0 0 
 
 [在装完Linux系统之后自己去修改Swap分区的大小(两种方法) ](http://blog.itpub.net/29440247/viewspace-1445502/)
+
 [Linux增加swap分区大小](http://blog.csdn.net/zhouzme/article/details/19578025)
