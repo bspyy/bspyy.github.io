@@ -1,7 +1,3 @@
-# Dependencies
-markdown:         redcarpet
-highlighter:      pygments
-
 title: 技术日志
 description: Description
 meta_description: "meta description"
