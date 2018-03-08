@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Liunx新增swap分区
+title: Linux新增swap分区
 ---
 
 编译php7的时候系统报 make: *** [ext/fileinfo/libmagic/apprentice.lo] 错误，网上查了一下，说是 
