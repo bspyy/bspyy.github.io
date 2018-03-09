@@ -23,4 +23,5 @@ ftp分为主动和被动两种工作模式，详细介绍如下：
     Passive mode on.
 
 相关链接：
-    <a href="https://www.linuxidc.com/Linux/2013-05/83742.htm" target="_blank">Linux系统访问Windows 2003 FTP连接时出现“227 Entering Passive Mode” 的解决方法</a>
+
+<a href="https://www.linuxidc.com/Linux/2013-05/83742.htm" target="_blank">Linux系统访问Windows 2003 FTP连接时出现“227 Entering Passive Mode” 的解决方法</a>
