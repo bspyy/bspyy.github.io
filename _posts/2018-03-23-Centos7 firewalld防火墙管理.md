@@ -1,4 +1,25 @@
 
+安装firewalld 防火墙
+
+	yum install firewalld
+
+开启服务
+
+	systemctl start firewalld.service
+
+关闭防火墙
+
+	systemctl stop firewalld.service
+
+开机自动启动
+
+	systemctl enable firewalld.service
+
+关闭开机制动启动
+
+	systemctl disable firewalld.service
+
+<!--more-->
 firewalld中常用的区域名称及策略规则
 
 | 	区域  	| 	默认规则策略 		
@@ -12,6 +33,8 @@ firewalld中常用的区域名称及策略规则
 |dmz		|拒绝流入的流量，除非与流出的流量相关；而如果流量与ssh服务相关，则允许流量
 |block		|拒绝流入的流量，除非与流出的流量相关
 |drop		|拒绝流入的流量，除非与流出的流量相关
+
+#### 使用firewall-cmd 命令
 
 **firewall-cmd**命令中使用的参数以及作用
 
@@ -42,7 +65,6 @@ firewalld中常用的区域名称及策略规则
 
 	[root@localhost ~]# firewall-cmd --state
 	running
-
 
 查看所有可用区域
 
