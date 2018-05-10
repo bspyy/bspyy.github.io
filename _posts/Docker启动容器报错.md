@@ -9,14 +9,14 @@ See '/usr/bin/docker-current run --help'.
 
 解决方式：将docker当前文件系统改为 overlay
 
-#####1.停掉docker服务
+##### 1.停掉docker服务
 
 	systemctl stop docker
-#####2.删除当前docker images的镜像
+##### 2.删除当前docker images的镜像
 
 	rm -rf /var/lib/docker
 
-#####3.修改文件系统
+##### 3.修改文件系统
 
 	vi /etc/sysconfig/docker-storage
 
